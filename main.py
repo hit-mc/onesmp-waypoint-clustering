@@ -1,7 +1,6 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-from matplotlib.ticker import AutoMinorLocator
 
 # cluster algorithms
 from sklearn.cluster import KMeans
@@ -70,6 +69,8 @@ for method in cluster_methods:
         # manually set ticks, more fine-grained
         ax.xaxis.set_label_text('x')
         ax.yaxis.set_label_text('z')
-        ax.xaxis.set_minor_locator(AutoMinorLocator())
-        ax.yaxis.set_minor_locator(AutoMinorLocator())
+        ax.minorticks_on()
+        ax.tick_params(which='major', length=8, width=1, direction='inout')
+        ax.tick_params(which='minor', length=4, width=1, direction='in')
+        ax.grid(which='both', linewidth=0.5)
     plt.show()
