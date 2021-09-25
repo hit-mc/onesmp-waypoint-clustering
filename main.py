@@ -26,6 +26,7 @@ def cluster_by_k_means(data_, n_clusters: int):
     return km.labels_, km.cluster_centers_
 
 
+# noinspection PyUnresolvedReferences
 def cluster_by_gmm(data_, n_clusters: int):
     data_ = np.array(data_)
     gmm = GaussianMixture(n_components=n_clusters).fit(data_)
