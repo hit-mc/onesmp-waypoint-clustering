@@ -41,7 +41,7 @@ def plot(data_: pd.DataFrame, labels_: list[int], centers_, colors_: list[str], 
     centers_ = pd.DataFrame(centers_)
     # invert Y axis
     ax = plt.gca()
-    if not ax.yaxis_inverted:
+    if ax.yaxis_inverted:
         ax.invert_yaxis()
     # draw
     plt.title(caption)
