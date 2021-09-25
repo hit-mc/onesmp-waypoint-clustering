@@ -20,7 +20,6 @@ colors = ['red', 'darkorange', 'olive', 'chartreuse', 'green', 'mediumspringgree
 
 
 def cluster_by_k_means(data_, n_clusters: int):
-    # Calculate seeds from kmeans++
     data_ = np.array(data_)
     km = KMeans(n_clusters=n_clusters).fit(data_)
     return km.labels_, km.cluster_centers_
