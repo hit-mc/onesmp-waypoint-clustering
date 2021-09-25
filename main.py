@@ -33,7 +33,7 @@ def cluster_by_gmm(data_, n_clusters: int):
     return labels_, gmm.means_
 
 
-def plot(data_: pd.DataFrame, labels_: list[int], centers_: pd.DataFrame, colors_: list[str], caption: str):
+def plot(data_: pd.DataFrame, labels_: list[int], centers_, colors_: list[str], caption: str):
     # enforce datatype
     centers_ = pd.DataFrame(centers_)
     # invert Y axis
