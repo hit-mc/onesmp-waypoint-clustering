@@ -5,8 +5,9 @@
 
 # 2. 使用
 
-1. 将坐标点存放在`waypoints.csv`文件里，编码设置为`utf-8`，格式可以参考*2.2*。
-2. 运行`main.py`。
+1. 安装`requirements.txt`里的依赖。
+2. 将坐标点存放在`waypoints.csv`文件里，编码设置为`utf-8`，格式可以参考*2.2*。
+3. 运行`main.py`。
 
 ## 2.2 `waypoints.csv`格式参考
 
