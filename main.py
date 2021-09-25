@@ -5,10 +5,15 @@ import matplotlib.pyplot as plt
 # cluster algorithms
 from sklearn.cluster import KMeans
 
+# configurations
+div8 = True
+
 # load data
 # columns: name, x, z
 waypoints = pd.read_csv('waypoints.csv')
 data = waypoints[['x', 'z']]
+if div8:
+    data /= 8
 colors = ['red', 'darkorange', 'olive', 'chartreuse', 'green', 'mediumspringgreen',
           'mediumturquoise', 'aqua', 'dodgerblue', 'blue', 'darkviolet', 'magenta',
           'deeppink', 'slategray']
