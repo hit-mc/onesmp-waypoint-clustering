@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+from matplotlib.ticker import AutoMinorLocator
 
 # cluster algorithms
 from sklearn.cluster import KMeans
@@ -59,9 +60,13 @@ for method in cluster_methods:
     plt.figure(figsize=(20.48, 15.36), dpi=100)
     plt.suptitle(method.__name__, fontsize=24, fontweight='bold')
     for clusters, plt_id in zip(range(1, MAX_CLUSTERS + 1), subplots):
+        print(f'Plotting with method {method.__name__}, n_cluster={clusters}')
         labels, centers = method(data, clusters)
-        plt.subplot(*plt_id)
+        ax = plt.subplot(*plt_id)
         plot(data, labels, centers, colors, f'n_clusters={clusters}')
-        print('labels:', labels)
-        print('centers', centers)
+        # manually set ticks, more fine-grained
+        ax.xaxis.set_label_text('x')
+        ax.yaxis.set_label_text('z')
+        ax.xaxis.set_minor_locator(AutoMinorLocator())
+
     plt.show()
