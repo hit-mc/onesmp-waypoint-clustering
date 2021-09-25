@@ -46,7 +46,10 @@ def plot(data_: pd.DataFrame, labels_: list[int], centers_, colors_: list[str], 
         ax.invert_yaxis()
     # draw
     plt.title(caption)
-    plt.scatter(data_.iloc[:, 0], data_.iloc[:, 1], c=[colors_[x] for x in labels_], alpha=0.5)
+    plt.scatter(data_.iloc[:, 0],
+                data_.iloc[:, 1],
+                c=[colors_[x] for x in labels_],
+                alpha=0.5)
     plt.scatter(centers_.iloc[:, 0],
                 centers_.iloc[:, 1],
                 c=colors_[:len(centers_)],
@@ -68,5 +71,4 @@ for method in cluster_methods:
         ax.xaxis.set_label_text('x')
         ax.yaxis.set_label_text('z')
         ax.xaxis.set_minor_locator(AutoMinorLocator())
-
     plt.show()
