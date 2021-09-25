@@ -9,7 +9,9 @@ from sklearn.cluster import KMeans
 # columns: name, x, z
 waypoints = pd.read_csv('waypoints.csv')
 data = waypoints[['x', 'z']]
-colors = ['red', 'orange', 'green', 'aqua', 'blue', 'darkviolet', 'slategray'] * 2
+colors = ['red', 'darkorange', 'olive', 'chartreuse', 'green', 'mediumspringgreen',
+          'mediumturquoise', 'aqua', 'dodgerblue', 'blue', 'darkviolet', 'magenta',
+          'deeppink', 'slategray']
 
 
 def cluster_by_k_means(data_, n_clusters: int):
