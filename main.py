@@ -71,4 +71,5 @@ for method in cluster_methods:
         ax.xaxis.set_label_text('x')
         ax.yaxis.set_label_text('z')
         ax.xaxis.set_minor_locator(AutoMinorLocator())
+        ax.yaxis.set_minor_locator(AutoMinorLocator())
     plt.show()
