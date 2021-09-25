@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # cluster algorithms
-from sklearn.cluster import kmeans_plusplus, KMeans
+from sklearn.cluster import KMeans
 
 # load data
 # columns: name, x, z
